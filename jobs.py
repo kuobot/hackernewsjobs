@@ -9,11 +9,11 @@ app = Flask(__name__, template_folder='.')
 @app.route('/')
 def homepage():
  params = {
-   'api_key': 'tcGxTcvmgx6p'
+   'api_key': {API-KEY}
  }
  print 'Getting results from parsehub'
  r = requests.get(
-     'https://www.parsehub.com/api/v2/projects/tWdh5WjuNSPR/last_ready_run/data',
+     'https://www.parsehub.com/api/v2/projects/{PROJECT-KEY}/last_ready_run/data',
      params=params)
  print "Got results"
  #print titles
