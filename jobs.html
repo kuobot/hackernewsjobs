@@ -1,0 +1,26 @@
+<!-- activities.html -->
+
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+</head>
+<style>
+
+h1, h2, h3 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+</style>
+    <body>
+     <h1>YC Startup Jobs</h1>
+     	<h3>These are jobs at YC startups.</h3>
+             {% for job in jobs %}
+                <h2><a href="{{job["url"]}}">{{job["name"]}}</a></h2>                    
+             {% endfor %}
+    </body>
+</html>
